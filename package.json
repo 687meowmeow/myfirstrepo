@@ -1,8 +1,8 @@
 {
-  "name": "bookish",
+  "name": "firstproj",
   "private": true,
   "version": "1.0.0",
-  "author": "Cody Tucker",
+  "author": "karlson",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
