@@ -22,7 +22,7 @@ export default function NavBar() {
               <Nav.Link>Home</Nav.Link>
             </Link>
             <Nav.Link href="/meow">
-              <Link passHref href="/meow">meow</Link>
+              <Link passHref href="/meow">games</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -12,7 +12,6 @@
 //         });
 //       }
 //     };
-  
 //     return (
 //       <Card className="gameard" style={{ width: '18rem' }}>
 //         <Card.Img className="imageFormat" variant="top" src={gameObj.image} />
@@ -21,12 +20,11 @@
 //           <Link href={`/games/${gameObj.firebaseKey}`} passHref>
 //             <Button variant="primary" className="m-2">View Items</Button>
 //           </Link>
-//           <Link href={`/games/edit/${gameObj.firebaseKey}`} passHref> 
-//             <Button variant="info">Edit Room</Button>
+//           <Link href={`/games/edit/${gameObj.firebaseKey}`} passHref>
+//            <Button variant="info">Edit Room</Button>
 //           </Link>
 //           <Button variant="danger" onClick={deleteThisRoom} className="m-2">Delete Room</Button>
 //         </Card.Body>
 //       </Card>
 //     );
 //   }
-  
