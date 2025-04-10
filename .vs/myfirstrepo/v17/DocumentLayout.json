@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\components\\NavBar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:components\\NavBar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -11,11 +15,7 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\_app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hayden\\Source\\Repos\\myfirstrepo\\pages\\meow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\meow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pages\\meow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,8 +62,7 @@
               "RelativeToolTip": "package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-04T06:03:08.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T06:03:08.63Z"
             },
             {
               "$type": "Document",
@@ -75,21 +74,19 @@
               "RelativeToolTip": "components\\RegisterForm.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-04T05:54:34.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T05:54:34.348Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "meow.js",
-              "DocumentMoniker": "C:\\Users\\Hayden\\Source\\Repos\\myfirstrepo\\pages\\meow.js",
+              "DocumentMoniker": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\meow.js",
               "RelativeDocumentMoniker": "pages\\meow.js",
-              "ToolTip": "C:\\Users\\Hayden\\Source\\Repos\\myfirstrepo\\pages\\meow.js",
+              "ToolTip": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\meow.js",
               "RelativeToolTip": "pages\\meow.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-04T05:50:56.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T05:50:56.731Z"
             },
             {
               "$type": "Document",
@@ -101,44 +98,43 @@
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-04-04T05:50:10.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T05:50:10.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NavBar.js",
               "DocumentMoniker": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\components\\NavBar.js",
               "RelativeDocumentMoniker": "components\\NavBar.js",
               "ToolTip": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\components\\NavBar.js",
               "RelativeToolTip": "components\\NavBar.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-04T01:51:02.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_app.js",
               "DocumentMoniker": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\_app.js",
               "RelativeDocumentMoniker": "pages\\_app.js",
               "ToolTip": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\_app.js",
               "RelativeToolTip": "pages\\_app.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-03T08:41:01.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "index.js",
               "DocumentMoniker": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\index.js",
               "RelativeDocumentMoniker": "pages\\index.js",
               "ToolTip": "C:\\Users\\Hayden\\source\\repos\\myfirstrepo\\pages\\index.js",
               "RelativeToolTip": "pages\\index.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-03T05:37:27.941Z",
               "EditorCaption": ""
