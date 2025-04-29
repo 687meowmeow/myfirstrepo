@@ -22,7 +22,7 @@ function GamePage() {
         margin: '0 auto',
       }}
     >
-      <h1>Games Menu</h1>
+      <h1 style={{ color: 'white' }}>Games Menu</h1>
       <Button
         variant="primary"
         type="button"
