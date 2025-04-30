@@ -1,69 +1,69 @@
 {
     "-ONFYfdItRBTLyNUheKL": {
-        "id": "-ONFYfdItRBTLyNUheKL",
+        "firebaseKey": "-ONFYfdItRBTLyNUheKL",
         "name": "Isabelle",
         "image": "http://dummyimage.com/240x100.png/5fa2dd/ffffff",
         "desc": "11th Floor",
         "genre": "Apt 1451"
     },
     "-ONFYfdItRBTLyNUheKM": {
-        "id": "-ONFYfdItRBTLyNUheKM",
+        "firebaseKey": "-ONFYfdItRBTLyNUheKM",
         "name": "Meier",
         "image": "http://dummyimage.com/249x100.png/ff4444/ffffff",
         "desc": "PO Box 18387",
         "genre": "Room 1157"
     },
     "-ONFYfdJbUZXPGXKvmXc": {
-        "id": "-ONFYfdJbUZXPGXKvmXc",
+        "firebaseKey": "-ONFYfdJbUZXPGXKvmXc",
         "name": "Maddy",
         "image": "http://dummyimage.com/240x100.png/5fa2dd/ffffff",
         "desc": "Room 516",
         "genre": "Suite 20"
     },
     "-ONFYfdKVb-s4FVESFSF": {
-        "id": "-ONFYfdKVb-s4FVESFSF",
+        "firebaseKey": "-ONFYfdKVb-s4FVESFSF",
         "name": "Druci",
         "image": "http://dummyimage.com/126x100.png/dddddd/000000",
         "desc": "20th Floor",
         "genre": "Suite 71"
     },
     "-ONFYfdKVb-s4FVESFSG": {
-        "id": "-ONFYfdKVb-s4FVESFSG",
+        "firebaseKey": "-ONFYfdKVb-s4FVESFSG",
         "name": "Joni",
         "image": "http://dummyimage.com/123x100.png/ff4444/ffffff",
         "desc": "PO Box 65659",
         "genre": "Suite 38"
     },
     "-ONFYfdL9h6URsBwGAzN": {
-        "id": "-ONFYfdL9h6URsBwGAzN",
+        "firebaseKey": "-ONFYfdL9h6URsBwGAzN",
         "name": "Zara",
         "image": "http://dummyimage.com/201x100.png/dddddd/000000",
         "desc": "PO Box 49049",
         "genre": "Suite 65"
     },
     "-ONFYfdL9h6URsBwGAzO": {
-        "id": "-ONFYfdL9h6URsBwGAzO",
+        "firebaseKey": "-ONFYfdL9h6URsBwGAzO",
         "name": "Madelle",
         "image": "http://dummyimage.com/245x100.png/dddddd/000000",
         "desc": "Apt 191",
         "genre": "Apt 1574"
     },
     "-ONFYfdMpjvVtgQImf_j": {
-        "id": "-ONFYfdMpjvVtgQImf_j",
+        "firebaseKey": "-ONFYfdMpjvVtgQImf_j",
         "name": "Loreen",
         "image": "http://dummyimage.com/148x100.png/dddddd/000000",
         "desc": "2nd Floor",
         "genre": "PO Box 49694"
     },
     "-ONFYfdNHOEHkqEJBXDV": {
-        "id": "-ONFYfdNHOEHkqEJBXDV",
+        "firebaseKey": "-ONFYfdNHOEHkqEJBXDV",
         "name": "Patti",
         "image": "http://dummyimage.com/161x100.png/cc0000/ffffff",
         "desc": "Room 1013",
         "genre": "Suite 43"
     },
     "-ONFYfdNHOEHkqEJBXDW": {
-        "id": "-ONFYfdNHOEHkqEJBXDW",
+        "firebaseKey": "-ONFYfdNHOEHkqEJBXDW",
         "name": "Melodie",
         "image": "http://dummyimage.com/126x100.png/5fa2dd/ffffff",
         "desc": "PO Box 13064",

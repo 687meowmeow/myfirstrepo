@@ -7,13 +7,13 @@ import { deleteGame } from '../api/gameAPI';
 function gameCard({ gameObj, onUpdate }) {
   const deleteThisGame = () => {
     if (window.confirm(`Are you 1000% positive you want to delete ${gameObj.name}? This action cannot be undone.`)) {
-      deleteGame(gameObj.id).then(() => {
+      deleteGame(gameObj.firebaseKey).then(() => {
         onUpdate();
       });
     }
   };
   return (
-    <Card className="gamecard" class="card text-bg-dark mb-3" style={{ width: '18rem' }}>
+    <Card className="gamecard" class="card text-light bg-black mb-3" style={{ width: '18rem' }}>
       <Card.Img className="imageFormat" variant="top" src={gameObj.image} />
       <Card.Body>
         <Card.Title>{gameObj.name}</Card.Title>
