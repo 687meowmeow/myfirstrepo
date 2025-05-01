@@ -17,10 +17,10 @@ function gameCard({ gameObj, onUpdate }) {
       <Card.Img className="imageFormat" variant="top" src={gameObj.image} />
       <Card.Body>
         <Card.Title>{gameObj.name}</Card.Title>
-        <Link href={`/games/${gameObj.id}`} passHref>
+        <Link href={`/games/${gameObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">View Game</Button>
         </Link>
-        <Link href={`/games/edit/${gameObj.id}`} passHref>
+        <Link href={`/games/edit/${gameObj.firebaseKey}`} passHref>
           <Button variant="info">Edit Game</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisGame} className="m-2">Delete Game</Button>

@@ -43,12 +43,8 @@ function CreateGameForm({ gameObj }) {
         name: formInput.name,
         image: formInput.image,
       };
-      createGame(payload).then(({ name }) => {
-        const patchPayload = { firebaseKey: name };
-        updateGame(patchPayload).then(() => {
-          router.push('/games');
-        });
-      });
+      createGame(payload);
+      router.push('/games');
     }
   };
 
