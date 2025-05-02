@@ -1,27 +1,36 @@
-// import React, { useEffect, useState, useCallback } from 'react';
+// import React, { useEffect, useCallback } from 'react';
 // import { useRouter } from 'next/router';
-// import { getAllgamesInAGame } from '../../api/gameAPI';
-// import { getSingleGame } from '../../api/GameAPI';
-// import gameCard from '../../components/gameCard';
+// import { getSingleGame } from '../../api/gameAPI';
 
-export default function ViewAllGames() {
+export default function ViewGame() {
+//   const [gameName, setGameName] = useState('');
+// //   const [gameImage, setGameImage] = useState('');
+//   const router = useRouter();
+//   const { id } = router.query;
+
+//   const viewGameData = useCallback(() => {
+//     if (id) {
+//     //   getSingleGame(id).then((gameData) => {
+//     //     setGameName(gameData.name);
+//     //     setGameImage(gameData.image);
+//       });
+//     }
+//   }, [id]);
+
+//   useEffect(() => {
+//     viewGameData();
+//   }, [viewGameData]);
+
 //   return (
-//     <div>
-//       {/* Set the background image dynamically */}
-//       <div className="full-page-background" style={{ backgroundImage: `url(${GameImage})` }} />
-//       <div className="overlay" />
-//       <div className="content-container">
-//         <h1>games in {GameName}</h1>
-//         <div className="d-flex flex-wrap">
-//           {games.length > 0 ? (
-//             games.map((game) => (
-//               <gameCard key={game.id} gameObj={game} onUpdate={viewAllGamegames} />
-//             ))
-//           ) : (
-//             <p>No games found in this Game.</p>
-//           )}
-//         </div>
-//       </div>
-//     </div>
+    // <div>
+    //   <div className="content-container">
+    //     <div className="d-flex flex-wrap">
+    //       <div className="gameInfo">
+    //         <h3>Game Title</h3>
+    //         <p>Description of the game goes here.</p>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
 //   );
 }

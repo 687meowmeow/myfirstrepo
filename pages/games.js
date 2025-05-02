@@ -18,8 +18,6 @@ export default function ViewGames() {
 
   return (
     <div>
-      <div className="full-page-background my-games-background" />
-      <div className="overlay" />
       <div className="content-container">
         <h1 style={{ color: 'white' }} className="text-center margin-y-large">My Games</h1>
         <div className="d-flex flex-wrap">

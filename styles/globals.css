@@ -20,3 +20,129 @@ a {
 body {
   background-color: #394142;
 }
+
+.gameCard{
+  width: 18rem;
+  margin: 10px;
+  background-color: #0a0a0e;
+  color: white; 
+}
+
+.card {
+  width: 18rem;
+  height: 25rem; /* Set a fixed height for the card */
+  margin: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 10rem; /* Set a fixed height for the image */
+  object-fit: cover; 
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-y-large {
+  margin-top: 2rem; /* Adjust the value as needed */
+  margin-bottom: 2rem; /* Adjust the value as needed */
+}
+
+.full-page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Ensure the background covers the entire area */
+  z-index: -2; /* Ensure it is behind other content */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 35, 35, 0.5); /* Adjust the transparency here */
+  z-index: -1; /* Ensure it is behind the content */
+}
+
+.content-container {
+  position: relative;
+  z-index: 1; /* Ensure content appears above the background */
+  padding: 20px; /* Adjust padding as needed */
+  padding-top: 120px;
+}
+
+.navbar-nav .dropdown-menu {
+  display: none;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* Remove the margin so it aligns perfectly */
+}
+
+.signin-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 30px;
+  margin: 0 auto;
+  z-index: 1;
+  background: url('/path/to/your/background/image.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 400px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%;
+}
+
+.welcome-message {
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #333; /* Adjust color as needed */
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555; /* Adjust color as needed */
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.sign-in-btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+.full-center-container {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  height: 100vh;             /* full viewport height */
+}
+
+.gameInfo {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  justify-content: center;   /* centers horizontally */
+  align-items: center; 
+  padding: 20px;
+  margin: 0 auto;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

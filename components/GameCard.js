@@ -13,7 +13,7 @@ function gameCard({ gameObj, onUpdate }) {
     }
   };
   return (
-    <Card className="gamecard" class="card text-light bg-black mb-3" style={{ width: '18rem' }}>
+    <Card className="gameCard" class="card text-light bg-black mb-3" style={{ width: '18rem' }}>
       <Card.Img className="imageFormat" variant="top" src={gameObj.image} />
       <Card.Body>
         <Card.Title>{gameObj.name}</Card.Title>
