@@ -136,13 +136,48 @@ body {
 }
 
 .gameInfo {
-  background: white;
+  background: rgb(148, 138, 138);
   border: 2px solid black;
   border-radius: 10px;
-  justify-content: center;   /* centers horizontally */
-  align-items: center; 
+  display: flex;                
+  flex-direction: column;     
   padding: 20px;
   margin: 0 auto;
-  width: 250px;
+  width: 2500px;
+  height: 750px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.game-img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
 }

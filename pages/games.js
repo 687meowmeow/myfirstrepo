@@ -18,6 +18,9 @@ export default function ViewGames() {
 
   return (
     <div>
+      {/* <div className="button-container">
+        <button className="btn btn-success">Add Game</button>
+      </div> */}
       <div className="content-container">
         <h1 style={{ color: 'white' }} className="text-center margin-y-large">My Games</h1>
         <div className="d-flex flex-wrap">

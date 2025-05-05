@@ -1,18 +1,24 @@
-// import React, { useEffect, useCallback } from 'react';
+// import React, { useEffect, useCallback, useState } from 'react';
+// import Link from 'next/link';
+// import { Button } from 'react-bootstrap';
 // import { useRouter } from 'next/router';
 // import { getSingleGame } from '../../api/gameAPI';
 
-export default function ViewGame() {
+// export default function ViewGame() {
 //   const [gameName, setGameName] = useState('');
-// //   const [gameImage, setGameImage] = useState('');
+//   const [gameImage, setGameImage] = useState('');
+//   const [gameDesc, setGameDesc] = useState('');
+//   const [gameGenre, setGameGenre] = useState('');
 //   const router = useRouter();
 //   const { id } = router.query;
 
 //   const viewGameData = useCallback(() => {
 //     if (id) {
-//     //   getSingleGame(id).then((gameData) => {
-//     //     setGameName(gameData.name);
-//     //     setGameImage(gameData.image);
+//       getSingleGame(id).then((gameData) => {
+//         setGameName(gameData.name);
+//         setGameImage(gameData.image);
+//         setGameDesc(gameData.desc);
+//         setGameGenre(gameData.genre)
 //       });
 //     }
 //   }, [id]);
@@ -22,15 +28,26 @@ export default function ViewGame() {
 //   }, [viewGameData]);
 
 //   return (
-    // <div>
-    //   <div className="content-container">
-    //     <div className="d-flex flex-wrap">
-    //       <div className="gameInfo">
-    //         <h3>Game Title</h3>
-    //         <p>Description of the game goes here.</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+//     <div>
+//       <div className="content-container">
+//         <div className="d-flex flex-wrap">
+//           <div className="gameInfo">
+//             <div className="top-left">
+//               <h3 style={{ fontSize: 70 }}>{gameName}</h3>
+//               <p>{gameGenre}</p>
+//               <p style={{ fontSize: 20 }}>{gameDesc}</p>
+//             </div>
+//             <div className="top-right">
+//                 <img src={gameImage} className="game-img" ></img>
+//             </div>
+//             <div className="bottom-left">
+//                 <Link href="/games">
+//                     <Button variant="danger" size="lg">Go back</Button>
+//                 </Link>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
 //   );
-}
+// }

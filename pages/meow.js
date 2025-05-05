@@ -30,7 +30,7 @@ function GamePage() {
         className="m-2"
         onClick={handleViewAllGames}
       >
-        View My Games
+        View Games
       </Button>
       <Button
         variant="success"
