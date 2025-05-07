@@ -10,6 +10,7 @@ import { createGame, updateGame } from '../../api/gameAPI';
 const initialState = {
   name: '',
   image: '',
+  desc: '',
 };
 
 function CreateGameForm({ gameObj }) {
@@ -42,6 +43,7 @@ function CreateGameForm({ gameObj }) {
       const payload = {
         name: formInput.name,
         image: formInput.image,
+        game: formInput.desc,
       };
       createGame(payload);
       router.push('/games');
@@ -75,6 +77,18 @@ function CreateGameForm({ gameObj }) {
               placeholder="Enter an image url"
               name="image"
               value={formInput.image}
+              onChange={handleChange}
+              required
+            />
+          </FloatingLabel>
+
+          {/* GAME DESC INPUT */}
+          <FloatingLabel controlId="floatingInput2" label="Game Description" className="mb-3">
+            <Form.Control
+              type="text"
+              placeholder="Enter a desc"
+              name="desc"
+              value={formInput.desc}
               onChange={handleChange}
               required
             />

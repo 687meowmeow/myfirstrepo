@@ -24,6 +24,9 @@ export default function NavBar() {
             <Nav.Link href="/meow">
               <Link passHref href="/meow">games</Link>
             </Nav.Link>
+            <Nav.Link href="/test">
+              <Link passHref href="/test">test</Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
