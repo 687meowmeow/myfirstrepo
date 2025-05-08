@@ -74,15 +74,20 @@ const deleteGame = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const parseGames = (id) => new Promise((resolve, reject) => {
+const parseUserGames = (id) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/user/${id}/games.json`, {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/string',
+      'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(data.split(", ")))
+    .then((data) => {
+      const gameIds = data.split(', ');
+      Promise.all(gameIds.map(getSingleGame))
+        .then(resolve)
+        .catch(reject);
+    })
     .catch(reject);
 });
 
@@ -92,5 +97,5 @@ export {
   createGame,
   updateGame,
   deleteGame,
-  parseGames,
+  parseUserGames,
 };

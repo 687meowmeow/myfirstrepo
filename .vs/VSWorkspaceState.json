@@ -1,15 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\components",
-    "\\node_modules\\.bin",
-    "\\node_modules\\firebase",
-    "\\node_modules\\firebase\\auth",
-    "\\node_modules\\firebase\\auth\\dist",
-    "\\node_modules\\firebase\\auth\\dist\\auth",
-    "\\pages",
-    "\\public",
-    "\\styles"
+    ""
   ],
   "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false

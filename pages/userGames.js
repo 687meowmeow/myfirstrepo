@@ -2,18 +2,10 @@ import { useEffect, useState } from 'react';
 import { getAllGames, parseUserGames } from '../api/gameAPI';
 import GameCard from '../components/GameCard';
 
-export default function ViewGames() {
+export default function ViewUserGames() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    // getAllGames()
-    //   .then((data) => {
-    //     console.warn('Fetched games:', data);
-    //     setGames(data);
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error fetching games:', error);
-    //   });
     parseUserGames('-JV7mHmwp80fDq3o1ojGb9WIiN6x2')
       .then((data) => {
         setGames(data);
@@ -27,7 +19,7 @@ export default function ViewGames() {
          <button className="btn btn-success">Add Game</button>
        </div> */}
       <div className="content-container">
-        <h1 style={{ color: 'white' }} className="text-center margin-y-large">Games</h1>
+        <h1 style={{ color: 'white' }} className="text-center margin-y-large">My Games</h1>
         <div className="d-flex flex-wrap">
           {games.map((game) => (
             <GameCard key={game.id} gameObj={game} onUpdate={() => getAllGames().then(setGames)} />
