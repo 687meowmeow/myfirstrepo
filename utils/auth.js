@@ -36,14 +36,22 @@ const registerUser = (userInfo) =>
 
 const signIn = () => {
   const provider = new GoogleAuthProvider();
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      console.log('User signed in:', result.user);
-    })
-    .catch((error) => {
-      console.error('Sign-in error:', error);
-    });
-};
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log('User signed in:', user);
+
+        createUser({
+          id: "-" + user.uid,
+          name: user.displayName,
+          email: user.email,
+          games: "",
+        });
+      })
+      .catch((error) => {
+        console.error('Sign-in error:', error);
+      });
+  };
 
 const signOutUser = () => {
   signOut(auth)
@@ -55,9 +63,45 @@ const signOutUser = () => {
     });
 };
 
+const createUser = (userInfo) => {
+  
+  return fetch(`${clientCredentials.databaseURL}/user/${userInfo.id}.json`)
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      return res.json();
+    })
+    .then((existingUser) => {
+      if (existingUser) {
+        console.log('User already exists, skipping creation.');
+        return null; 
+      }
+
+      return fetch(`${clientCredentials.databaseURL}/user/${userInfo.id}.json`, {
+        method: 'PUT',
+        body: JSON.stringify(userInfo),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+          return res.json();
+        })
+        .then(() => {
+          console.log('User record created');
+        });
+    })
+    .catch((error) => {
+      console.error('Error checking or creating user:', error);
+    });
+};
+
+
+
 export {
   signIn, //
   signOutUser as signOut, // Renaming for consistency
   checkUser,
   registerUser,
+  createUser,
 };

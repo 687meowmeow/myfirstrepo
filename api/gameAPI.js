@@ -26,6 +26,18 @@ const getSingleGame = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getUserSingleGame = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/user/${uid}/games/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 const createGame = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/games.json`, {
     method: 'POST',
@@ -83,13 +95,44 @@ const parseUserGames = (id) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const gameIds = data.split(', ');
-      Promise.all(gameIds.map(getSingleGame))
+      const gameIds = Object.values(data); 
+      const firebaseKeys = gameIds.map(game => game.firebaseKey); //gets keys so i dont have to change other code because i changed how games were stored
+      Promise.all(firebaseKeys.map(getUserSingleGame))
         .then(resolve)
         .catch(reject);
     })
     .catch(reject);
 });
+
+const buyGame = (id, uid) => new Promise((resolve, reject) => {
+  getSingleGame(id)
+    .then((game) => {
+      fetch(`${endpoint}/user/${uid}/games.json`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(game),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const key = data.name; 
+          console.log(key);
+          console.log(game.firebaseKey);
+          return fetch(`${endpoint}/user/${uid}/games/${key}.json`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ firebaseKey: key }),
+          }).then(() => resolve(key));
+        })
+        .catch(reject);
+    })
+    .catch(reject);
+});
+
+
 
 export {
   getAllGames,
@@ -98,4 +141,6 @@ export {
   updateGame,
   deleteGame,
   parseUserGames,
+  getUserSingleGame,
+  buyGame,
 };
