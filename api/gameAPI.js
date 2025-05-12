@@ -26,7 +26,7 @@ const getSingleGame = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getUserSingleGame = (firebaseKey) => new Promise((resolve, reject) => {
+const getUserSingleGame = (firebaseKey, uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/user/${uid}/games/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
@@ -95,9 +95,9 @@ const parseUserGames = (id) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const gameIds = Object.values(data); 
-      const firebaseKeys = gameIds.map(game => game.firebaseKey); //gets keys so i dont have to change other code because i changed how games were stored
-      Promise.all(firebaseKeys.map(getUserSingleGame))
+      const gameIds = Object.values(data);
+      const firebaseKeys = gameIds.map((game) => game.firebaseKey);// gets keys so i dont have to change other code because i changed how games were stored
+      Promise.all(firebaseKeys.map((key) => getUserSingleGame(key, id)))
         .then(resolve)
         .catch(reject);
     })
@@ -116,7 +116,7 @@ const buyGame = (id, uid) => new Promise((resolve, reject) => {
       })
         .then((response) => response.json())
         .then((data) => {
-          const key = data.name; 
+          const key = data.name;
           console.log(key);
           console.log(game.firebaseKey);
           return fetch(`${endpoint}/user/${uid}/games/${key}.json`, {
@@ -131,8 +131,6 @@ const buyGame = (id, uid) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
-
-
 
 export {
   getAllGames,

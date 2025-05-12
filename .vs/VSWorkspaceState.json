@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\api",
+    "\\components",
+    "\\pages",
+    "\\pages\\games",
+    "\\public",
+    "\\styles"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\pages\\userGames.js",
   "PreviewInSolutionExplorer": false
 }
