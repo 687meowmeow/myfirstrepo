@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import { deleteGame, buyGame } from '../api/gameAPI';
 
 function gameCard({ gameObj, onUpdate, user = undefined }) {
-  console.warn(user);
+  console.warn(gameObj);
   const deleteThisGame = () => {
     if (window.confirm(`Are you 1000% positive you want to delete ${gameObj.name}? This action cannot be undone.`)) {
-      deleteGame(gameObj.firebaseKey, user).then(() => {
+      deleteGame(gameObj.firebaseKey, `-${user.uid}`).then(() => {
         onUpdate();
       });
     }
@@ -21,7 +21,7 @@ function gameCard({ gameObj, onUpdate, user = undefined }) {
         <Link href={`/games/${gameObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">View Game</Button>
         </Link>
-        <Link href={`/games/edit/${gameObj.firebaseKey}`} passHref>
+        <Link href={`/games/edit/${gameObj.firebaseKey}?user=-${user.uid}`} passHref>
           <Button variant="info">Edit Game</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisGame} className="m-2">Delete Game</Button>

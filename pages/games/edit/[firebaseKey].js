@@ -6,10 +6,11 @@ import { getSingleGame } from '../../../api/gameAPI';
 export default function EditGameForm() {
   const [editGame, setEditGame] = useState({});
   const router = useRouter();
-  const { firebaseKey } = router.query;
+  const { firebaseKey, user = undefined } = router.query;
 
+  console.warn(getSingleGame(firebaseKey, user));
   useEffect(() => {
-    getSingleGame(firebaseKey).then(setEditGame);
+    getSingleGame(firebaseKey, user).then(setEditGame);
   }, [firebaseKey]);
 
   return (

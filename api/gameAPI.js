@@ -3,7 +3,7 @@ import { clientCredentials } from '../utils/client';
 const endpoint = clientCredentials.databaseURL;
 
 const getPath = (firebaseKey = undefined, user = undefined) => {
-  return (user == undefined) ? `${endpoint}/games/${firebaseKey}.json` : `${endpoint}/user/${user}/games.json`
+  return (user == undefined) ? `${endpoint}/games/${firebaseKey}.json` : `${endpoint}/user/${user}/games/${firebaseKey}.json`
 }
 
 const getAllGames = () => new Promise((resolve, reject) => {
@@ -18,8 +18,8 @@ const getAllGames = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleGame = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/games/${firebaseKey}.json`, {
+const getSingleGame = (firebaseKey, user) => new Promise((resolve, reject) => {
+  fetch(getPath(firebaseKey, user), {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ const getSingleGame = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getUserSingleGame = (firebaseKey, uid) => new Promise((resolve, reject) => {
+const getUserSingleGame = (firebaseKey, uid) => new Promise((resolve, reject) => { //remove later
   fetch(`${endpoint}/user/${uid}/games/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
@@ -66,8 +66,8 @@ const createGame = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const updateGame = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/games/${payload.firebaseKey}.json`, {
+const updateGame = (payload, user = undefined) => new Promise((resolve, reject) => {
+  fetch(getPath(`${payload.firebaseKey}`, user), {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
