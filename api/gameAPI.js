@@ -2,6 +2,10 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
+const getPath = (firebaseKey = undefined, user = undefined) => {
+  return (user == undefined) ? `${endpoint}/games/${firebaseKey}.json` : `${endpoint}/user/${user}/games.json`
+}
+
 const getAllGames = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/games.json`, {
     method: 'GET',
@@ -75,15 +79,15 @@ const updateGame = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const deleteGame = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/games/${firebaseKey}.json`, {
+const deleteGame = (firebaseKey, user = undefined) => new Promise((resolve, reject) => {
+  fetch(getPath(firebaseKey, user), {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
   }).then((response) => response.json())
     .then((data) => resolve((data)))
-    .catch(reject);
+    .catch(reject).then(console.log(getPath(firebaseKey, user)));
 });
 
 const parseUserGames = (id) => new Promise((resolve, reject) => {

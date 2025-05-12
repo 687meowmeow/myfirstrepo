@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAllGames, parseUserGames } from '../api/gameAPI';
+import { parseUserGames } from '../api/gameAPI';
 import GameCard from '../components/GameCard';
 import { useAuth } from '../utils/context/authContext';
 
@@ -25,7 +25,7 @@ export default function ViewUserGames() {
         <h1 style={{ color: 'white' }} className="text-center margin-y-large">My Games</h1>
         <div className="d-flex flex-wrap">
           {games.map((game) => (
-            <GameCard key={game.id} gameObj={game} user={user} onUpdate={() => getAllGames().then(setGames)} />
+            <GameCard key={game.id} gameObj={game} user={user} onUpdate={() => parseUserGames(`-${user.uid}`).then(setGames)} />
           ))}
         </div>
       </div>
