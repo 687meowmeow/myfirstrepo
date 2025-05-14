@@ -109,11 +109,11 @@ CreateGameForm.propTypes = {
   user: PropTypes.shape({
     uid: PropTypes.string.isRequired,
   }),
-  userFlag: PropTypes.bool,
 };
 
 CreateGameForm.defaultProps = {
   gameObj: initialState,
+  user: undefined,
 };
 
 export default CreateGameForm;
