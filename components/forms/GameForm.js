@@ -5,7 +5,6 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { createGame, updateGame } from '../../api/gameAPI';
-// import { useAuth } from '../../utils/context/authContext';
 
 const initialState = {
   name: '',
@@ -13,10 +12,9 @@ const initialState = {
   desc: '',
 };
 
-function CreateGameForm({ gameObj }) {
+function CreateGameForm({ gameObj, user = undefined }) {
   const [formInput, setFormInput] = useState(initialState);
   const router = useRouter();
-
   // Define the handleChange function to update formInput
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,8 +34,8 @@ function CreateGameForm({ gameObj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (gameObj.firebaseKey) {
-      updateGame(formInput).then(() => {
-        router.push('/games');
+      updateGame(formInput, user).then(() => {
+        router.back();
       });
     } else {
       const payload = {
@@ -46,7 +44,7 @@ function CreateGameForm({ gameObj }) {
         game: formInput.desc,
       };
       createGame(payload);
-      router.push('/games');
+      router.back();
     }
   };
 
@@ -108,6 +106,10 @@ CreateGameForm.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
   }),
+  user: PropTypes.shape({
+    uid: PropTypes.string.isRequired,
+  }),
+  userFlag: PropTypes.bool,
 };
 
 CreateGameForm.defaultProps = {

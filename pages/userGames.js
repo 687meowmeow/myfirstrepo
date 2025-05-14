@@ -10,7 +10,6 @@ export default function ViewUserGames() {
   useEffect(() => {
     parseUserGames(`-${user.uid}`)
       .then((data) => {
-        console.log(data);
         setGames(data);
       })
       .catch(console.error);
@@ -25,7 +24,7 @@ export default function ViewUserGames() {
         <h1 style={{ color: 'white' }} className="text-center margin-y-large">My Games</h1>
         <div className="d-flex flex-wrap">
           {games.map((game) => (
-            <GameCard key={game.id} gameObj={game} user={user} onUpdate={() => parseUserGames(`-${user.uid}`).then(setGames)} />
+            <GameCard key={game.id} gameObj={game} user={user} userFlag onUpdate={() => parseUserGames(`-${user.uid}`).then(setGames)} />
           ))}
         </div>
       </div>

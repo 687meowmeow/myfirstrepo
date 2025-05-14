@@ -40,12 +40,12 @@ const signIn = () => {
       .then((result) => {
         const user = result.user;
         console.log('User signed in:', user);
-
         createUser({
           id: "-" + user.uid,
           name: user.displayName,
           email: user.email,
           games: "",
+          admin: false,
         });
       })
       .catch((error) => {
@@ -67,12 +67,10 @@ const createUser = (userInfo) => {
   
   return fetch(`${clientCredentials.databaseURL}/user/${userInfo.id}.json`)
     .then((res) => {
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       return res.json();
     })
     .then((existingUser) => {
       if (existingUser) {
-        console.log('User already exists, skipping creation.');
         return null; 
       }
 
@@ -84,7 +82,6 @@ const createUser = (userInfo) => {
         },
       })
         .then((res) => {
-          if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
           return res.json();
         })
         .then(() => {

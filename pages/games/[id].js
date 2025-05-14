@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/link-passhref */
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useCallback, useState } from 'react';
-import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { getSingleGame } from '../../api/gameAPI';
@@ -13,11 +12,11 @@ export default function ViewGame() {
   const [gameDesc, setGameDesc] = useState('');
   const [gameGenre, setGameGenre] = useState('');
   const router = useRouter();
-  const { id } = router.query;
+  const { id, user = undefined } = router.query;
 
   const viewGameData = useCallback(() => {
     if (id) {
-      getSingleGame(id).then((gameData) => {
+      getSingleGame(id, user).then((gameData) => {
         setGameName(gameData.name);
         setGameImage(gameData.image);
         setGameDesc(gameData.desc);
@@ -44,9 +43,7 @@ export default function ViewGame() {
               <img src={gameImage} className="game-img" />
             </div>
             <div className="bottom-left">
-              <Link href="/games">
-                <Button variant="danger" size="lg">Go back</Button>
-              </Link>
+              <Button onClick={router.back} variant="danger" size="lg">Go back</Button>
             </div>
           </div>
         </div>

@@ -8,12 +8,10 @@ export default function EditGameForm() {
   const router = useRouter();
   const { firebaseKey, user = undefined } = router.query;
 
-  console.warn(getSingleGame(firebaseKey, user));
   useEffect(() => {
     getSingleGame(firebaseKey, user).then(setEditGame);
   }, [firebaseKey]);
-
   return (
-    <CreateGameForm gameObj={editGame} />
+    <CreateGameForm gameObj={editGame} user={user} />
   );
 }

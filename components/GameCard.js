@@ -4,8 +4,12 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { deleteGame, buyGame } from '../api/gameAPI';
 
-function gameCard({ gameObj, onUpdate, user = undefined }) {
-  console.warn(gameObj);
+function gameCard({
+  gameObj,
+  onUpdate,
+  user = undefined,
+  userFlag = false,
+}) {
   const deleteThisGame = () => {
     if (window.confirm(`Are you 1000% positive you want to delete ${gameObj.name}? This action cannot be undone.`)) {
       deleteGame(gameObj.firebaseKey, `-${user.uid}`).then(() => {
@@ -18,10 +22,10 @@ function gameCard({ gameObj, onUpdate, user = undefined }) {
       <Card.Img className="imageFormat" variant="top" src={gameObj.image} />
       <Card.Body>
         <Card.Title>{gameObj.name}</Card.Title>
-        <Link href={`/games/${gameObj.firebaseKey}`} passHref>
+        <Link href={(userFlag) ? `/games/${gameObj.firebaseKey}?user=-${user.uid}` : `/games/${gameObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">View Game</Button>
         </Link>
-        <Link href={`/games/edit/${gameObj.firebaseKey}?user=-${user.uid}`} passHref>
+        <Link href={(userFlag) ? `/games/edit/${gameObj.firebaseKey}?user=-${user.uid}` : `/games/edit/${gameObj.firebaseKey}`} passHref>
           <Button variant="info">Edit Game</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisGame} className="m-2">Delete Game</Button>
@@ -40,6 +44,10 @@ gameCard.propTypes = {
     genre: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    uid: PropTypes.string.isRequired,
+  }),
+  userFlag: PropTypes.bool,
 };
 
 export default gameCard;

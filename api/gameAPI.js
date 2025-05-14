@@ -28,6 +28,7 @@ const getSingleGame = (firebaseKey, user) => new Promise((resolve, reject) => {
     .then((response) => response.json())
     .then((data) => resolve(data))
     .catch(reject);
+    console.log(getPath(firebaseKey, user));
 });
 
 const getUserSingleGame = (firebaseKey, uid) => new Promise((resolve, reject) => { //remove later
@@ -67,6 +68,7 @@ const createGame = (payload) => new Promise((resolve, reject) => {
 });
 
 const updateGame = (payload, user = undefined) => new Promise((resolve, reject) => {
+  console.warn(user);
   fetch(getPath(`${payload.firebaseKey}`, user), {
     method: 'PATCH',
     headers: {
